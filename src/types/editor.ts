@@ -1,6 +1,6 @@
 export interface VideoModule {
   title: string;
-  videoId: string;
+  videoUrl: string;
 }
 
 export interface TextSection {
@@ -34,35 +34,35 @@ export const defaultConfig: PageConfig = {
   videos: [
     {
       title: "Como pintar flores do campo cor de rosa em tecido. Muito fácil. Iniciantes. Renda extra.",
-      videoId: "Jtm2zBmkBjs"
+      videoUrl: "https://www.youtube.com/watch?v=Jtm2zBmkBjs"
     },
     {
       title: "Como pintar papoulas em tecido. Renda extra. Pintura em tecido.",
-      videoId: "fljB-cxFLLo"
+      videoUrl: "https://www.youtube.com/watch?v=fljB-cxFLLo"
     },
     {
       title: "Como pintar flores do campo em tecido. azul e lilás Fácil. Para iniciantes.",
-      videoId: "5cVhuxlMM2Q"
+      videoUrl: "https://www.youtube.com/watch?v=5cVhuxlMM2Q"
     },
     {
       title: "Como pintar folhas em tecido. Para iniciantes! Vídeo completo no meu canal.",
-      videoId: "59ykDhiO5v8"
+      videoUrl: "https://www.youtube.com/watch?v=59ykDhiO5v8"
     },
     {
       title: "Como pintar folhas em tecido. Para iniciantes!",
-      videoId: "d1qyF2qdFqU"
+      videoUrl: "https://www.youtube.com/watch?v=d1qyF2qdFqU"
     },
     {
       title: "Como pintar folhas em tecido. Muito fácil. Vídeo completo no meu canal.",
-      videoId: "4EYChNkxxEc"
+      videoUrl: "https://www.youtube.com/watch?v=4EYChNkxxEc"
     },
     {
       title: "Como pintar flor do campo azul em tecido. Vídeo completo no meu canal.",
-      videoId: "DJXXGeqeZ0U"
+      videoUrl: "https://www.youtube.com/watch?v=DJXXGeqeZ0U"
     },
     {
       title: "Como pintar papoula lilás em tecido. Vídeo completo no meu canal. Assistam! Se inscrevam!",
-      videoId: "ft3YoE89RyU"
+      videoUrl: "https://www.youtube.com/watch?v=ft3YoE89RyU"
     }
   ],
   textSections: [],

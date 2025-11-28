@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play } from "lucide-react";
+import { extractVideoId } from "@/lib/youtube";
 
 interface VideoCardProps {
   title: string;
-  videoId: string;
+  videoUrl: string;
   moduleNumber: number;
 }
 
-const VideoCard = ({ title, videoId, moduleNumber }: VideoCardProps) => {
+const VideoCard = ({ title, videoUrl, moduleNumber }: VideoCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  const videoId = extractVideoId(videoUrl);
+  const thumbnailUrl = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "";
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg">

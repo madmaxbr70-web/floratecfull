@@ -29,7 +29,7 @@ const Editor = ({ open, onOpenChange, config, onSave }: EditorProps) => {
   const addVideo = () => {
     setEditConfig({
       ...editConfig,
-      videos: [...editConfig.videos, { title: "", videoId: "" }],
+      videos: [...editConfig.videos, { title: "", videoUrl: "" }],
     });
   };
 
@@ -38,7 +38,7 @@ const Editor = ({ open, onOpenChange, config, onSave }: EditorProps) => {
     setEditConfig({ ...editConfig, videos: newVideos });
   };
 
-  const updateVideo = (index: number, field: "title" | "videoId", value: string) => {
+  const updateVideo = (index: number, field: "title" | "videoUrl", value: string) => {
     const newVideos = [...editConfig.videos];
     newVideos[index] = { ...newVideos[index], [field]: value };
     setEditConfig({ ...editConfig, videos: newVideos });
@@ -166,11 +166,11 @@ const Editor = ({ open, onOpenChange, config, onSave }: EditorProps) => {
                     />
                   </div>
                   <div>
-                    <Label>ID do Vídeo (YouTube)</Label>
+                    <Label>Link do Vídeo (YouTube)</Label>
                     <Input
-                      value={video.videoId}
-                      onChange={(e) => updateVideo(index, "videoId", e.target.value)}
-                      placeholder="Ex: Jtm2zBmkBjs"
+                      value={video.videoUrl}
+                      onChange={(e) => updateVideo(index, "videoUrl", e.target.value)}
+                      placeholder="Ex: https://www.youtube.com/watch?v=Jtm2zBmkBjs"
                     />
                   </div>
                 </CardContent>

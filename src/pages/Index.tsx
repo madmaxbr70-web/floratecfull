@@ -102,9 +102,9 @@ const Index = () => {
           <div className="space-y-6">
             {config.videos.map((video, index) => (
               <VideoCard
-                key={video.videoId}
+                key={video.videoUrl}
                 title={video.title}
-                videoId={video.videoId}
+                videoUrl={video.videoUrl}
                 moduleNumber={index + 1}
               />
             ))}
